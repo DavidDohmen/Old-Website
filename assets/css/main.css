@@ -3234,11 +3234,11 @@ input, select, textarea {
 		}
 
 		.wrapper.style1 {
-			background-color: #ffffff; /* Intro and contact field*/
+			background-color: #d4d4d4; /* Intro and contact field*/
 		}
 
 		.wrapper.style1-alt {
-			background-color: #e0e0e0; /*Footer*/
+			background-color: #a7a7a7; /*Footer*/
 		}
 
 		.wrapper.style2 {
