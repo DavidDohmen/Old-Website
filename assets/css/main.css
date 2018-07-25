@@ -40,8 +40,12 @@ blockquote, q {
 	quotes: none;
 }
 
-:root {
+/*:root {
     --ocell-accent:#aeda19ff;
+}*/
+
+:root {
+    --ocell-accent: rgba(255,161,56);
 }
 
 	blockquote:before, blockquote:after, q:before, q:after {
