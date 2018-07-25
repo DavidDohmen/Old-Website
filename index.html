@@ -10,6 +10,13 @@
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
 	</head>
+	<style>
+			.fixed-ratio-resize { /* basic responsive img */
+				max-width: 100%;
+				height: auto;
+				width: auto\9; /* IE8 */
+			}
+	</style>
 	<body class="is-preload">
 
 		<!-- Sidebar -->
@@ -32,7 +39,7 @@
 				<!-- Intro -->
 					<section id="intro" class="wrapper style1 fullscreen fade-up">
 						<div class="inner">
-								<center><img src="images/OcellNoBG.svg" class="responsive"/></center>
+								<center><img class="fixed-ratio-resize" src="images/OcellNoBG.svg" alt=""/></center>
 								<h2><center><font color="white">RETHINKING AERIAL ANALYTICS</font></center></h2>
 								<center><ul class="actions">
 								<li><a href="#one" class="button primary scrolly">Learn more</a></li>
@@ -119,7 +126,7 @@
 								<h2>Feel free to contact us</h2>
 								<div class="split style1">
 									<section>
-										<form method="post" action="https://formspree.io/dohmen.david@gmail.com">
+										<form method="post" action="https://formspree.io/david.dohmen@ocell.com">
 											<div class="field half first">
 												<label for="name">Name</label>
 												<input type="text" name="name" id="name" />
@@ -144,10 +151,6 @@
 												<span>Lichtenbergstraße 6<br />
 													85748 Garching<br />
 												Germany</span>
-											</li>
-											<li>
-												<h3>Email</h3>
-												<a href="#">dohmen.david(at)gmail.com</a>
 											</li>
 											<li>
 												<h3>Social</h3>
