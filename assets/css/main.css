@@ -42,11 +42,11 @@ blockquote, q {
 
 /*:root {
     --ocell-accent:#aeda19ff;
-}
+}*/
 
 :root {
-    --ocell-accent:rgb(255,161,56);
-}*/
+    --ocell-accent: rgb(255,161,56);
+}
 
 	blockquote:before, blockquote:after, q:before, q:after {
 		content: '';
@@ -2534,12 +2534,12 @@ input, select, textarea {
 					color: #5052b5;
 				}
 
-				.wrapper.style2-alt .icon.major:before {
+				.wrapper.style2-alt .icon.major:before {	
 					color: #3e4094;
 				}
 
 				.wrapper.style3 .icon.major:before {
-					color:rgb(255,161,56);
+					color:var(--ocell-accent);
 				}
 
 				.wrapper.style3-alt .icon.major:before {
@@ -3756,10 +3756,10 @@ input, select, textarea {
 			}
 
 			#sidebar nav a:after {
-				background-image: -moz-linear-gradient(to right, #2a2a2a,rgb(255,161,56));
-				background-image: -webkit-linear-gradient(to right, #2a2a2a,rgb(255,161,56));
-				background-image: -ms-linear-gradient(to right, #2a2a2a,rgb(255,161,56));
-				background-image: linear-gradient(to right, #2a2a2a,rgb(255,161,56));
+				background-image: -moz-linear-gradient(to right, #2a2a2a,var(--ocell-accent));
+				background-image: -webkit-linear-gradient(to right, #2a2a2a,var(--ocell-accent));
+				background-image: -ms-linear-gradient(to right, #2a2a2a,var(--ocell-accent));
+				background-image: linear-gradient(to right, #2a2a2a,var(--ocell-accent));
 				-moz-transition: max-width 0.2s ease;
 				-webkit-transition: max-width 0.2s ease;
 				-ms-transition: max-width 0.2s ease;
@@ -3848,7 +3848,7 @@ input, select, textarea {
 
 						#sidebar nav a:after {
 							background-image: none;
-							background-color:rgb(255,161,56);
+							background-color:var(--ocell-accent);
 						}
 
 		}
