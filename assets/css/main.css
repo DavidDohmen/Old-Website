@@ -45,7 +45,7 @@ blockquote, q {
 }
 
 :root {
-    --ocell-accent: rgba(255,161,56);
+    --ocell-accent:rgb(255,161,56);
 }*/
 
 	blockquote:before, blockquote:after, q:before, q:after {
@@ -2539,7 +2539,7 @@ input, select, textarea {
 				}
 
 				.wrapper.style3 .icon.major:before {
-					color: rgba(255,161,56);
+					color:rgb(255,161,56);
 				}
 
 				.wrapper.style3-alt .icon.major:before {
@@ -3756,10 +3756,10 @@ input, select, textarea {
 			}
 
 			#sidebar nav a:after {
-				background-image: -moz-linear-gradient(to right, #2a2a2a, rgba(255,161,56));
-				background-image: -webkit-linear-gradient(to right, #2a2a2a, rgba(255,161,56));
-				background-image: -ms-linear-gradient(to right, #2a2a2a, rgba(255,161,56));
-				background-image: linear-gradient(to right, #2a2a2a, rgba(255,161,56));
+				background-image: -moz-linear-gradient(to right, #2a2a2a,rgb(255,161,56));
+				background-image: -webkit-linear-gradient(to right, #2a2a2a,rgb(255,161,56));
+				background-image: -ms-linear-gradient(to right, #2a2a2a,rgb(255,161,56));
+				background-image: linear-gradient(to right, #2a2a2a,rgb(255,161,56));
 				-moz-transition: max-width 0.2s ease;
 				-webkit-transition: max-width 0.2s ease;
 				-ms-transition: max-width 0.2s ease;
@@ -3848,7 +3848,7 @@ input, select, textarea {
 
 						#sidebar nav a:after {
 							background-image: none;
-							background-color: rgba(255,161,56);
+							background-color:rgb(255,161,56);
 						}
 
 		}
