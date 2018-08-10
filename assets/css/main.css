@@ -3756,10 +3756,10 @@ input, select, textarea {
 			}
 
 			#sidebar nav a:after {
-				background-image: -moz-linear-gradient(to right, #2a2a2a, var(--ocell-accent));
-				background-image: -webkit-linear-gradient(to right, #2a2a2a, var(--ocell-accent));
-				background-image: -ms-linear-gradient(to right, #2a2a2a, var(--ocell-accent));
-				background-image: linear-gradient(to right, #2a2a2a, var(--ocell-accent));
+				background-image: -moz-linear-gradient(to right, #2a2a2a, rgba(255,161,56));
+				background-image: -webkit-linear-gradient(to right, #2a2a2a, rgba(255,161,56));
+				background-image: -ms-linear-gradient(to right, #2a2a2a, rgba(255,161,56));
+				background-image: linear-gradient(to right, #2a2a2a, rgba(255,161,56));
 				-moz-transition: max-width 0.2s ease;
 				-webkit-transition: max-width 0.2s ease;
 				-ms-transition: max-width 0.2s ease;
@@ -3848,7 +3848,7 @@ input, select, textarea {
 
 						#sidebar nav a:after {
 							background-image: none;
-							background-color: var(--ocell-accent);
+							background-color: rgba(255,161,56);
 						}
 
 		}
