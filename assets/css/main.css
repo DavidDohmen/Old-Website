@@ -42,11 +42,11 @@ blockquote, q {
 
 /*:root {
     --ocell-accent:#aeda19ff;
-}*/
+}
 
 :root {
     --ocell-accent: rgba(255,161,56);
-}
+}*/
 
 	blockquote:before, blockquote:after, q:before, q:after {
 		content: '';
@@ -2539,7 +2539,7 @@ input, select, textarea {
 				}
 
 				.wrapper.style3 .icon.major:before {
-					color: var(--ocell-accent);
+					color: rgba(255,161,56);
 				}
 
 				.wrapper.style3-alt .icon.major:before {
