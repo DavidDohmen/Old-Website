@@ -22,21 +22,28 @@
 		<link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
 	</head>
 	<style>
-		.fixed-ratio-resize { /* basic responsive img */
-			max-width: 100%;
+			.fixed-ratio-resize { /* basic responsive img */
+				max-width: 100%;
+				height: auto;
+				width: auto\9; /* IE8 */
+			}
+		</style>	
+	<style>
+		.fixed-ratio-resize-small { /* basic responsive img */
+			max-width: 40%;
 			height: auto;
 			width: auto\9; /* IE8 */
 		}
 	</style>
 	<body class="is-preload">
 		<!-- Header -->
-			<header id="header">
+			<header id="header" >
 				<nav>
 					<ul>
-						<li><a href="index.html">Home</a></li>
-						<li><a href="usecases.html#infrastructure">Large Infrastructure Monitoring</a></li>
-						<li><a href="usecases.html#nrm">Natural Resource Monitoring</a></li>
-						<li><a href="usecases.html#sar">Search and Rescue</a></li>
+						<li><a href="large-infrastructure.html">Large Infrastructure Monitoring</a></li>
+						<li><a href="natural-resource-management.html">Natural Resource Monitoring</a></li>
+						<li><a href="search-and-rescue.html">Search and Rescue</a></li>
+						<li><a href="index.html"><img class="fixed-ratio-resize-small" src="images/OcellNoBG_orange.svg" alt=""/></a></li>
 						<!-- <li><a href="generic.html" class="active">Generic</a></li>
 						<li><a href="elements.html">Elements</a></li> -->
 					</ul>
@@ -47,7 +54,6 @@
 			<div id="wrapper">
 				<section id="infrastructure" class="wrapper style1 fullscreen fade-up">
 					<div class="inner">
-							<center><img class="fixed-ratio-resize" src="images/OcellNoBG_orange.svg" alt=""/></center>
 							<h2><center><font color="white">AERIAL ANALYTICS FOR LARGE INFRASTRUCTURE MONITORING</font></center></h2>
 							<div align="center">
 								<ul style="display: inline-table;" class="actions">
@@ -57,28 +63,7 @@
 						</div>
 				</section>
 			
-				<section id="nrm" class="wrapper style1 fullscreen fade-up">
-					<div class="inner">
-							<center><img class="fixed-ratio-resize" src="images/OcellNoBG_orange.svg" alt=""/></center>
-							<h2><center><font color="white">AERIAL ANALYTICS FOR NATURAL RESOURCE MONITORING</font></center></h2>
-							<div align="center">
-								<ul style="display: inline-table;" class="actions">
-									<li><a href="index.html" class="button primary scrolly">Home</a></li>
-								</ul>
-							</div>
-						</div>
-				</section>
-				<section id="sar" class="wrapper style1 fullscreen fade-up">
-					<div class="inner">
-							<center><img class="fixed-ratio-resize" src="images/OcellNoBG_orange.svg" alt=""/></center>
-							<h2><center><font color="white">AERIAL ANALYTICS FOR SEARCH AND RESCUE</font></center></h2>
-							<div align="center">
-								<ul style="display: inline-table;" class="actions">
-									<li><a href="index.html" class="button primary scrolly">Home</a></li>
-								</ul>
-							</div>
-						</div>
-				</section>				
+			
 			
 				<!-- Main 
 					<section id="main" class="wrapper style1 fade-up">
