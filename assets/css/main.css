@@ -3238,7 +3238,7 @@ input, select, textarea {
 		}
 
 		.wrapper.style1-alt {
-			background-color: #a7a7a7; /*Footer*/
+			background-color: #ffffff; /*Footer*/
 		}
 
 		.wrapper.style2 {
@@ -3246,7 +3246,7 @@ input, select, textarea {
 		}
 
 		.wrapper.style2-alt {
-			background-color: #000000;
+			background-color: #ebebeb; /* Contact */
 		}
 
 		.wrapper.style3 {
