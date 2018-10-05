@@ -5,39 +5,93 @@
 <html>
 	<head>
 		<title>Ocell</title>
-		<!-- Global site tag (gtag.js) - Google Analytics -->
+		<!-- Default for Google Analytics: Off -->
 		<script async src="https://www.googletagmanager.com/gtag/js?id=UA-122967782-1"></script>
 		<script>
-		window.dataLayer = window.dataLayer || [];
-		function gtag(){dataLayer.push(arguments);}
-		gtag('js', new Date());
-		gtag('config', 'UA-122967782-1');
+			window['ga-disable-UA-122967782-1'] = true;
 		</script>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="assets/css/main.css" />
-		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
-		<link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+
+		<!-- Cookie consent Popup and Logic -->
 		<link rel="stylesheet" type="text/css" href="assets/css/cookieconsent.min.css" />
 		<script src="assets/js/cookieconsent.min.js"></script>
 		<script>
 		window.addEventListener("load", function(){
 		window.cookieconsent.initialise({
-		  "palette": {
-			"popup": {
-			  "background": "#000000"
+			onInitialise: function(status) {
+				var type = this.options.type;
+				var didConsent = this.hasConsented();
+				if (type == 'opt-in' && didConsent) {
+					/* Activate Google Analytics */
+					window['ga-disable-UA-122967782-1'] = false;
+					window.dataLayer = window.dataLayer || [];
+					function gtag(){dataLayer.push(arguments);}
+					gtag('js', new Date());
+					gtag('config', 'UA-122967782-1');
+				}
+				if (type == 'opt-out' && !didConsent) {
+					/* Keep Google Analytics deactivated */
+					window['ga-disable-UA-122967782-1'] = true;
+				}
+				},
+			onStatusChange: function(status, chosenBefore) {
+				var type = this.options.type;
+				var didConsent = this.hasConsented();
+				if (type == 'opt-in' && didConsent) {
+					/* Activate Google Analytics */
+					window['ga-disable-UA-122967782-1'] = false;
+					window.dataLayer = window.dataLayer || [];
+					function gtag(){dataLayer.push(arguments);}
+					gtag('js', new Date());
+					gtag('config', 'UA-122967782-1');				}
+				if (type == 'opt-out' && !didConsent) {
+					/* Keep Google Analytics deactivated */
+					window['ga-disable-UA-122967782-1'] = true;				}
+				},
+				
+			onRevokeChoice: function() {
+				var type = this.options.type;
+				if (type == 'opt-in') {
+					/* Keep Google Analytics deactivated */
+					window['ga-disable-UA-122967782-1'] = true;				}
+				if (type == 'opt-out') {
+					/* Activate Google Analytics */
+					window['ga-disable-UA-122967782-1'] = false;
+					window.dataLayer = window.dataLayer || [];
+					function gtag(){dataLayer.push(arguments);}
+					gtag('js', new Date());
+					gtag('config', 'UA-122967782-1');				}
+				},
+			container: document.getElementById("intro"),
+			"palette": {
+				"popup": {
+				"background": "#000000"
+				},
+				"button": {
+				"background": "#ffffff"
+				}
 			},
-			"button": {
-			  "background": "#ffffff"
-			}
-		  },
-		  "theme": "classic",
-		  "position": "bottom-right",
-		  "content": {
-			"href": "https://ocell.aero/privacypolicy.html"
+			"theme": "classic",
+			"position": "bottom-right",
+				"type": "opt-out",
+			"content": {
+				"dismiss": "Got it!",
+				"deny": "Decline",
+				"href": "https://ocell.aero/privacypolicy.html"
 		  }
 		})});
 		</script>
+	
+		<!-- Global site tag (gtag.js) - Google Analytics -->
+		<script>
+
+		</script>
+
+		<!-- Others -->
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+		<link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
 	</head>
 	<style>
 			.fixed-ratio-resize { /* basic responsive img */
@@ -187,17 +241,7 @@
 			</section>
 			</div>
 
-			
-		<!-- Footer 
-			<footer id="footer" class="wrapper style1-alt">
-				<div class="inner">
-					<ul class="menu">
-						<li><font color="white"> Ocell &copy; 2018. All rights reserved.</li><li>Logo Design: <a href="http://armandopastorin.com/" target="_blank" class="title">Armando Pastorin</a></li><li>Web Design: Ocell</li><li><a href="privacypolicy.html" class="title">Privacy Policy</a></li></a></font></li>
-					</ul>
-				</div>
-			</footer>
--->
-		<!-- Section -->
+		<!-- Footer -->
 			<footer id="footer" class="wrapper style1-alt">
 				<div class="inner">
 						<h2>Supported by:</h2>
@@ -211,7 +255,8 @@
 						</ul>
 
 					<ul class="menu">
-						<li><font color=#afafaf> Ocell &copy; 2018. All rights reserved.</li><li><a href="privacypolicy.html" class="title">Privacy Policy</a></li></a></font></li>
+						<li><font color=#afafaf> Ocell &copy; 2018. All rights reserved.</li>
+						<li><a href="privacypolicy.html" class="title">Privacy Policy</a></li></a></font></li>
 					</ul>
 				</div>	
 			</footer>
@@ -224,6 +269,5 @@
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
-
 	</body>
 </html>
