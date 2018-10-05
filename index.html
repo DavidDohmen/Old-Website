@@ -31,6 +31,10 @@
 				if (type == 'opt-out' && !didConsent) {
 					/* Keep Google Analytics deactivated */
 					window['ga-disable-UA-122967782-1'] = true;
+					window.dataLayer = window.dataLayer || [];
+					function gtag(){dataLayer.push(arguments);}
+					gtag('js', new Date());
+					gtag('config', 'UA-122967782-1');
 				}
 				},
 			onStatusChange: function(status, chosenBefore) {
@@ -42,24 +46,36 @@
 					window.dataLayer = window.dataLayer || [];
 					function gtag(){dataLayer.push(arguments);}
 					gtag('js', new Date());
-					gtag('config', 'UA-122967782-1');				}
+					gtag('config', 'UA-122967782-1');				
+				}
 				if (type == 'opt-out' && !didConsent) {
 					/* Keep Google Analytics deactivated */
-					window['ga-disable-UA-122967782-1'] = true;				}
+					window['ga-disable-UA-122967782-1'] = true;
+					window.dataLayer = window.dataLayer || [];
+					function gtag(){dataLayer.push(arguments);}
+					gtag('js', new Date());
+					gtag('config', 'UA-122967782-1');				
+				}
 				},
 				
 			onRevokeChoice: function() {
 				var type = this.options.type;
 				if (type == 'opt-in') {
 					/* Keep Google Analytics deactivated */
-					window['ga-disable-UA-122967782-1'] = true;				}
+					window['ga-disable-UA-122967782-1'] = true;
+					window.dataLayer = window.dataLayer || [];
+					function gtag(){dataLayer.push(arguments);}
+					gtag('js', new Date());
+					gtag('config', 'UA-122967782-1');				
+				}
 				if (type == 'opt-out') {
 					/* Activate Google Analytics */
 					window['ga-disable-UA-122967782-1'] = false;
 					window.dataLayer = window.dataLayer || [];
 					function gtag(){dataLayer.push(arguments);}
 					gtag('js', new Date());
-					gtag('config', 'UA-122967782-1');				}
+					gtag('config', 'UA-122967782-1');				
+				}
 				},
 			container: document.getElementById("intro"),
 			"palette": {
