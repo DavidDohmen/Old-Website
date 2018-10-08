@@ -57,26 +57,7 @@
 					gtag('config', 'UA-122967782-1');				
 				}
 				},
-				
-			onRevokeChoice: function() {
-				var type = this.options.type;
-				if (type == 'opt-in') {
-					/* Keep Google Analytics deactivated */
-					window['ga-disable-UA-122967782-1'] = true;
-					window.dataLayer = window.dataLayer || [];
-					function gtag(){dataLayer.push(arguments);}
-					gtag('js', new Date());
-					gtag('config', 'UA-122967782-1');				
-				}
-				if (type == 'opt-out') {
-					/* Activate Google Analytics */
-					window['ga-disable-UA-122967782-1'] = false;
-					window.dataLayer = window.dataLayer || [];
-					function gtag(){dataLayer.push(arguments);}
-					gtag('js', new Date());
-					gtag('config', 'UA-122967782-1');				
-				}
-				},
+			location: true,
 			container: document.getElementById("intro"),
 			"palette": {
 				"popup": {
@@ -90,7 +71,8 @@
 			"position": "bottom-right",
 				"type": "opt-out",
 			"content": {
-				"dismiss": "Got it!",
+				"allow": 'Got it!',
+				"policy": 'Privacy Policy',
 				"deny": "Decline",
 				"href": "https://ocell.aero/privacypolicy.html"
 		  }
@@ -139,7 +121,7 @@
 						<div class="inner">
 								<center><img class="fixed-ratio-resize" src="images/OcellNoBG_orange.svg" alt=""/></center>
 								<h2><center><font color="white">RETHINKING AERIAL ANALYTICS</font></center></h2>
-								<p><center><font color="white">Ocell is building autonomous and highly efficient unmanned aerial vehicles. Leveraging the latest innovations in AI, sensorics, solar cells and aerodynamics, we unlock profoundly new ways of aerial analytics.</font></center></p>
+								<p><center><font color="white">Ocell is building autonomous unmanned aerial vehicles for long endurance tasks. Leveraging the latest innovations in AI, sensorics, solar cells and aerodynamics, we unlock profoundly new ways of aerial analytics.</font></center></p>
 								<div align="center">
 									<ul style="display: inline-table;" class="actions">
 										<li><a href="#one" class="button primary scrolly">More</a></li>
@@ -206,7 +188,7 @@
 							<a href="http://ocell.aero" class="image"><img src="images/wildfire-lr80.jpg" alt="" data-position="25% 25%" /></a> <!--pic03-->
 							<div class="content">
 								<div class="inner">
-									<h2>Search and Rescue </h2>
+									<h2>Disaster Management </h2>
 									<p>Aerial support to save lifes during fires, floods or other disasters.</p>
 									<ul class="actions">
 										<li><a href="search-and-rescue.html" class="button">More</a></li>
@@ -268,11 +250,12 @@
 							<li><img src="images/Logo-EU-cmyk-jpg.jpg" height="100" alt=""/></li>
 							<li><img src="images/Claim-ESF-cmyk-jpg.jpg" height="100" alt=""/></li>
 							<li><a href="https://xpreneurs.io/"><img src="images/win xpreneurs rev 2 wide dark white.png" height="100" alt=""></a></li>
+							<li><img src="images/utum.jpg" height="100" alt=""/></li>
+							<li><img src="images/TUM.png" height="100" alt=""/></li>
 						</ul>
 
 					<ul class="menu">
 						<li><font color=#afafaf> Ocell &copy; 2018. All rights reserved.</li>
-						<li><a href="privacypolicy.html" class="title">Privacy Policy</a></li></a></font></li>
 					</ul>
 				</div>	
 			</footer>
